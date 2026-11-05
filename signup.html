@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create account — Stackly</title>
+<meta name="description" content="Create a Stackly account and choose your role: Admin for full control, Accountant for bookkeeping, or Viewer for read-only reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+tailwind.config = {
+  darkMode:'class',
+  theme:{ extend:{
+    colors:{
+      brand:{50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'},
+      mint:{400:'#34d399',500:'#10b981',600:'#059669'},
+      ink:{900:'#070b1a',800:'#0b1120',700:'#111a33'}
+    },
+    fontFamily:{ display:['"Plus Jakarta Sans"','sans-serif'], sans:['Inter','sans-serif'] },
+    boxShadow:{ glow:'0 18px 60px -20px rgba(99,102,241,.55)', card:'0 1px 2px rgba(16,24,40,.04), 0 12px 32px -16px rgba(16,24,40,.18)' }
+  }}
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-700 antialiased">
+
+<!-- ================= ICON SPRITE ================= -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true"><defs>
+<symbol id="i-layers" viewBox="398 82 212 290"><path fill="#fcd34d" stroke="none" d=" M419.713867,256.179962   C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504   C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480   C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606   C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682   C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807   C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670   C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406   C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245   C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262   C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688   C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221   C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979   C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546   C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866   C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402   C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962  z"/><path fill="#fcd34d" stroke="none" d=" M536.351807,311.352905   C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535   C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633   C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189   C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251   C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334   C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803   C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284   C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502   C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700   C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190   C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408   C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948   C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802   C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372   C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905  z"/></symbol>
+<g id="i-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></g>
+<g id="i-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></g>
+<g id="i-check"><polyline points="20 6 9 17 4 12"/></g>
+<g id="i-up-right"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></g>
+<g id="i-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></g>
+<g id="i-calendar"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></g>
+<g id="i-wallet"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></g>
+<g id="i-file"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></g>
+<g id="i-bars"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></g>
+<g id="i-pie"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></g>
+<g id="i-refresh"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></g>
+<g id="i-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g>
+<g id="i-lock"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+<g id="i-globe"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></g>
+<g id="i-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
+<g id="i-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></g>
+<g id="i-card"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></g>
+<g id="i-trend"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></g>
+<g id="i-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></g>
+<g id="i-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g>
+<g id="i-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g>
+<g id="i-clock"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></g>
+<g id="i-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></g>
+<g id="i-briefcase"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g>
+<g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></g>
+<g id="i-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+<g id="i-pen"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></g>
+<g id="i-coin"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a3 3 0 0 0-5 1v3a3 3 0 0 0 5 1"/><line x1="12" y1="7" x2="12" y2="9.5"/><line x1="12" y1="15" x2="12" y2="17"/></g>
+<g id="i-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></g>
+<g id="i-alert"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></g>
+<g id="i-info"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></g>
+<g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+<g id="i-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></g>
+<g id="i-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></g>
+</defs></svg>
+
+<div class="auth-page">
+
+  <!-- ================= BRAND PANEL ================= -->
+  <aside class="auth-aside hero-noise" style="--hero:url('../assets/photo-1551288049-bebda4e38f71-2000x0.webp')">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="auth-aside-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+        <span class="brand-name">Stackly</span>
+      </a>
+
+      <h1 class="hero-title" style="font-size:clamp(2rem,3.4vw,3rem);margin-top:2rem">
+        Start closing<br><span class="grad">in 1.2 days.</span>
+      </h1>
+      <p class="hero-sub" style="max-width:28rem">
+        Create your workspace, pick the role you'll sign in with, and invite the rest of the
+        team later — permissions follow the person, not the link.
+      </p>
+
+      <ul class="auth-points">
+        <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>14-day free trial on every plan — no credit card, cancel anytime.</li>
+        <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Import from QuickBooks, Xero or spreadsheets in an afternoon.</li>
+        <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Your role decides what you can open, edit and export from day one.</li>
+      </ul>
+    </div>
+
+    <figure class="auth-quote">
+      “Migration took an afternoon. The part I didn't expect was how painless role setup was —
+      three seats, three permission sets, zero emails to support.”
+      <figcaption>
+        <img class="avatar-img" data-fallback src="assets/photo-1560250097-0b93528c311a-160x160-faces.webp" alt="Marcus Reed" loading="lazy">
+        <span><strong>Marcus Reed</strong><small>CFO, Harbor Co.</small></span>
+      </figcaption>
+    </figure>
+  </aside>
+
+  <!-- ================= FORM PANEL ================= -->
+  <main class="auth-main">
+    <a href="index.html" class="auth-close" id="authClose" aria-label="Close and go to home" title="Back to home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-x"/></svg>
+    </a>
+    <div class="auth-card">
+
+      <a href="index.html" class="auth-brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+        <span class="brand-name" style="color:#070b1a">Stackly</span>
+      </a>
+
+      <h2 class="auth-title">Create your account</h2>
+      <p class="auth-sub">Takes under a minute. Choose your role to unlock the right dashboard.</p>
+
+      <form id="signupForm" novalidate style="margin-top:1.5rem">
+
+        <div class="role-field" id="sRoleField">
+          <label style="display:block;margin-bottom:.55rem;font-size:.8rem;font-weight:600;color:#334155">Your role in the workspace</label>
+          <div class="role-grid" id="roleGrid" role="radiogroup" aria-label="Account role">
+            <label class="role-opt">
+              <input type="radio" name="role" value="admin" checked>
+              <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg></span>
+              <span><b>Admin</b><small>Full control — settings, team, deletes, exports.</small></span>
+            </label>
+            <label class="role-opt">
+              <input type="radio" name="role" value="accountant">
+              <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-coin"/></svg></span>
+              <span><b>Accountant</b><small>Bookkeeping — entries, invoices, budgets, reports.</small></span>
+            </label>
+            <label class="role-opt">
+              <input type="radio" name="role" value="viewer">
+              <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-eye"/></svg></span>
+              <span><b>Viewer</b><small>Read-only — dashboards and reports, no edits.</small></span>
+            </label>
+          </div>
+          <small class="err" data-for="sRole"></small>
+        </div>
+
+        <div class="field" style="margin-top:1.25rem">
+          <label for="sName">Full name</label>
+          <input id="sName" type="text" placeholder="Jane Cooper" autocomplete="name">
+          <small class="err" data-for="sName"></small>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="sEmail">Work email</label>
+          <input id="sEmail" type="email" placeholder="jane@company.com" autocomplete="email">
+          <small class="err" data-for="sEmail"></small>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="sCompany">Company</label>
+          <input id="sCompany" type="text" placeholder="Acme Inc." autocomplete="organization">
+          <small class="err" data-for="sCompany"></small>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="sPass">Password</label>
+          <input id="sPass" type="password" placeholder="At least 8 characters" autocomplete="new-password">
+          <div class="pw-strength" id="pwStrength" data-score="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <small class="err" data-for="sPass"></small>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="sConfirm">Confirm password</label>
+          <input id="sConfirm" type="password" placeholder="Repeat it" autocomplete="new-password">
+          <small class="err" data-for="sConfirm"></small>
+        </div>
+
+        <label class="check-line" style="margin-top:1.15rem;font-size:.83rem">
+          <input type="checkbox" id="sTerms">
+          <span>I agree to the <a href="features.html#faq" style="color:#4f46e5;font-weight:600">Terms</a> and <a href="features.html#faq" style="color:#4f46e5;font-weight:600">Privacy Policy</a></span>
+        </label>
+        <small class="err" data-for="sTerms" style="display:block;margin-top:.35rem"></small>
+
+        <button type="submit" class="btn-primary w-full justify-center" style="margin-top:1.35rem;padding:.9rem 1.5rem">
+          Create account
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+        </button>
+
+        <div class="auth-note" style="margin-top:1.15rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-info"/></svg>
+          <span>Accounts are stored in this browser for the demo. Try the seeded logins on the <a href="login.html" style="font-weight:700;text-decoration:underline">sign-in page</a>.</span>
+        </div>
+      </form>
+
+      <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
+      <p class="auth-legal">
+        Stackly Technologies Pvt Ltd · 4th Floor, Tidel Park, Old No. 45, 5th Main Road, Taramani, Salem, Tamil Nadu 636016, India
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  const A = window.StacklyAuth;
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+
+  if (A.current()) { location.replace('dashboard.html'); return; }
+
+  /* role picker */
+  const grid = $('#roleGrid');
+  const syncRoles = () => $$('.role-opt').forEach(o => o.classList.toggle('is-on', o.querySelector('input').checked));
+  grid.addEventListener('change', () => { syncRoles(); clearErr('sRole'); $('#sRoleField').classList.remove('is-invalid'); });
+  syncRoles();
+
+  function clearErr(id) { A.setError(id, ''); }
+
+  /* password strength */
+  const scoreOf = pw => {
+    if (!pw) return 0;
+    let s = 0;
+    if (pw.length >= 8) s++;
+    if (pw.length >= 12) s++;
+    if (/[A-Z]/.test(pw) && /[a-z]/.test(pw)) s++;
+    if (/\d/.test(pw) && /[^A-Za-z0-9]/.test(pw)) s++;
+    return Math.min(s, 4);
+  };
+  $('#sPass').addEventListener('input', e => {
+    $('#pwStrength').dataset.score = scoreOf(e.target.value);
+    clearErr('sPass');
+  });
+
+  ['sName', 'sEmail', 'sCompany', 'sConfirm'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => clearErr(id));
+  });
+  $('#sTerms').addEventListener('change', () => {
+    const err = document.querySelector('.err[data-for="sTerms"]');
+    if ($('#sTerms').checked) err.textContent = '';
+  });
+
+  /* submit */
+  $('#signupForm').addEventListener('submit', e => {
+    e.preventDefault();
+    ['sName', 'sEmail', 'sCompany', 'sPass', 'sConfirm'].forEach(id => A.setError(id, ''));
+    $('#sRoleField').classList.remove('is-invalid');
+    document.querySelector('.err[data-for="sTerms"]').textContent = '';
+
+    const opt = grid.querySelector('input:checked');
+    const result = A.signup({
+      name: $('#sName').value,
+      email: $('#sEmail').value,
+      company: $('#sCompany').value,
+      password: $('#sPass').value,
+      confirm: $('#sConfirm').value,
+      role: opt ? opt.value : ''
+    });
+
+    if (!result.ok) {
+      if (result.field === 'sRole') {
+        const box = $('#sRoleField');
+        box.classList.add('is-invalid');
+        box.querySelector('.err[data-for="sRole"]').textContent = result.error;
+      } else if (result.field === 'sTerms') {
+        document.querySelector('.err[data-for="sTerms"]').textContent = result.error;
+      } else {
+        A.setError(result.field, result.error);
+        A.focusField(result.field);
+      }
+      A.toast(result.error, 'error');
+      return;
+    }
+
+    if (!$('#sTerms').checked) {
+      document.querySelector('.err[data-for="sTerms"]').textContent = 'Please accept the Terms and Privacy Policy.';
+      A.toast('Please accept the Terms and Privacy Policy.', 'error');
+      $('#sTerms').focus();
+      return;
+    }
+
+    A.toast('Account created — welcome to Stackly, ' + result.session.name.split(' ')[0] + '.', 'success');
+    setTimeout(() => location.replace('dashboard.html'), 550);
+  });
+})();
+</script>
+</body>
+</html>

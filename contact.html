@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Stackly — Talk to a finance specialist</title>
+<meta name="description" content="Request a Stackly walkthrough, reach our sales and support teams, find our registered office at Tidel Park in Salem, Tamil Nadu, and get answers to common questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+tailwind.config = {
+  darkMode:'class',
+  theme:{ extend:{
+    colors:{
+      brand:{50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'},
+      mint:{400:'#34d399',500:'#10b981',600:'#059669'},
+      ink:{900:'#070b1a',800:'#0b1120',700:'#111a33'}
+    },
+    fontFamily:{ display:['"Plus Jakarta Sans"','sans-serif'], sans:['Inter','sans-serif'] },
+    boxShadow:{ glow:'0 18px 60px -20px rgba(99,102,241,.55)', card:'0 1px 2px rgba(16,24,40,.04), 0 12px 32px -16px rgba(16,24,40,.18)' }
+  }}
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= ICON SPRITE ================= -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true"><defs>
+<symbol id="i-layers" viewBox="398 82 212 290"><path fill="#fcd34d" stroke="none" d=" M419.713867,256.179962   C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504   C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480   C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606   C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682   C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807   C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670   C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406   C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245   C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262   C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688   C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221   C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979   C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546   C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866   C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402   C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962  z"/><path fill="#fcd34d" stroke="none" d=" M536.351807,311.352905   C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535   C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633   C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189   C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251   C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334   C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803   C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284   C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502   C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700   C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190   C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408   C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948   C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802   C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372   C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905  z"/></symbol>
+<g id="i-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></g>
+<g id="i-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></g>
+<g id="i-check"><polyline points="20 6 9 17 4 12"/></g>
+<g id="i-up-right"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></g>
+<g id="i-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></g>
+<g id="i-calendar"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></g>
+<g id="i-wallet"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></g>
+<g id="i-file"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></g>
+<g id="i-bars"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></g>
+<g id="i-pie"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></g>
+<g id="i-refresh"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></g>
+<g id="i-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g>
+<g id="i-lock"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+<g id="i-globe"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></g>
+<g id="i-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
+<g id="i-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></g>
+<g id="i-card"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></g>
+<g id="i-trend"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></g>
+<g id="i-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></g>
+<g id="i-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g>
+<g id="i-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g>
+<g id="i-clock"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></g>
+<g id="i-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></g>
+<g id="i-briefcase"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g>
+<g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></g>
+<g id="i-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+<g id="i-pen"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></g>
+<g id="i-coin"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a3 3 0 0 0-5 1v3a3 3 0 0 0 5 1"/><line x1="12" y1="7" x2="12" y2="9.5"/><line x1="12" y1="15" x2="12" y2="17"/></g>
+<g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+<g id="i-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></g>
+<g id="i-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></g>
+<g id="i-xlogo"><path fill="currentColor" stroke="none" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></g>
+<g id="i-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></g>
+<g id="i-google"><path fill="currentColor" stroke="none" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></g>
+</defs></svg>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav class="nav-shell">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+        <span class="brand-name">Stackly</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="features.html">Features</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-ghost" href="login.html">Log in</a>
+        <a class="btn-primary !px-4 !py-2.5 text-sm" href="signup.html">Start free
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="features.html">Features <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="pricing.html">Pricing <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="about.html">About <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="contact.html">Contact <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <div class="divider"></div>
+      <a href="login.html">Log in</a>
+      <a href="signup.html">Start free</a>
+      <a href="dashboard.html">Open live dashboard</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero hero-compact hero-noise" style="--hero:url('../assets/photo-1497366754035-f200968a6e72-2000x0.webp')">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div style="max-width:44rem">
+      <span class="hero-eyebrow reveal">Contact</span>
+
+      <h1 class="hero-title reveal">
+        Talk to a<br>
+        <span class="grad">finance specialist.</span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        No sales script, no pressure — just a 20-minute walkthrough of your numbers with someone who
+        has closed a hundred books before yours. Bring your questions, we'll bring the answers.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn-hero" href="#contact">Request a demo
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+        </a>
+        <a class="btn-glass" href="dashboard.html">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-calendar"/></svg>
+          Open live dashboard
+        </a>
+      </div>
+
+      <div class="hero-meta reveal">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-mail"/></svg> hello@stackly.com</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg> +91 422 455 0142</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pin"/></svg> Salem, Tamil Nadu, India</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-clock"/></svg> Replies within one business day</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT FORM ================= -->
+<section class="section section-tint" id="contact">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="section-title">Tell us what you're solving</h2>
+      <p class="section-sub">Fill in a few details and a finance specialist will get back to you within one business day with a tailored walkthrough.</p>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-2 reveal">
+      <!-- form card -->
+      <div class="bento-cell" style="padding:2rem">
+        <h3 style="font-size:1.35rem">Request a demo</h3>
+        <p style="margin-top:.5rem">Share a little about your team and we'll tailor the 20-minute session to your numbers.</p>
+
+        <form id="contactForm" novalidate class="space-y-4" style="margin-top:1.75rem">
+          <div class="field"><label for="cName">Full name</label><input id="cName" type="text" placeholder="Jane Cooper" autocomplete="name"><small class="err" data-for="cName"></small></div>
+          <div class="field"><label for="cEmail">Work email</label><input id="cEmail" type="email" placeholder="jane@company.com" autocomplete="email"><small class="err" data-for="cEmail"></small></div>
+          <div class="field"><label for="cCompany">Company</label><input id="cCompany" type="text" placeholder="Acme Inc."><small class="err" data-for="cCompany"></small></div>
+          <div class="field"><label for="cTeam">Team size</label><select id="cTeam"><option value="">Select…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select><small class="err" data-for="cTeam"></small></div>
+          <div class="field"><label for="cMsg">What would you like to solve?</label><textarea id="cMsg" rows="5" placeholder="We're closing books in spreadsheets and need…"></textarea><small class="err" data-for="cMsg"></small></div>
+          <button type="submit" class="btn-primary w-full justify-center">Request a demo</button>
+          <p id="formStatus" class="hidden rounded-xl bg-mint-500/10 px-4 py-3 text-sm font-medium text-mint-600"></p>
+        </form>
+      </div>
+
+      <!-- info stack -->
+      <div style="display:grid;gap:1rem;align-content:start">
+        <div class="contact-info-card">
+          <span class="ic"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-mail"/></svg></span>
+          <div>
+            <h4>Sales</h4>
+            <p><a href="mailto:hello@stackly.com">hello@stackly.com</a><br>New plans, pricing and tailored demos for finance teams of every size.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <span class="ic" style="background:#ecfdf5;color:#059669"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg></span>
+          <div>
+            <h4>Support</h4>
+            <p><a href="tel:+914224550142">+91 422 455 0142</a><br>Existing customers reach a human in under 4 hours, Monday to Friday.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <span class="ic" style="background:#fff7ed;color:#d97706"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pin"/></svg></span>
+          <div>
+            <h4>Headquarters</h4>
+            <p>Stackly Technologies Pvt Ltd · 4th Floor, Tidel Park, Old No. 45, 5th Main Road, Taramani, Salem, Tamil Nadu 636016, India · <a href="#map">See the map</a></p>
+          </div>
+        </div>
+
+        <div class="bento-cell dark">
+          <h3>Prefer a live demo?</h3>
+          <p>Skip the form and explore the interactive workspace yourself — invoices, reconciliation, cash flow and reporting, all with sample data.</p>
+          <a class="btn-glass" style="margin-top:1.25rem" href="dashboard.html">Open live dashboard
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+          </a>
+        </div>
+
+        <div class="tag-row">
+          <span class="soft-tag">Sales replies · 1 business day</span>
+          <span class="soft-tag">Support first reply · 4 hours</span>
+          <span class="soft-tag">Phone · Mon–Fri, 9:30am–6:30pm IST</span>
+          <span class="soft-tag">Emergency line · 24/7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESPONSE TIMES ================= -->
+<section class="section-sm">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="bento reveal">
+      <div class="bento-cell b-md">
+        <span class="bento-icon" style="background:#eef2ff;color:#4f46e5"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-zap"/></svg></span>
+        <span class="big"><span data-count="1" data-suffix=" day">0</span></span>
+        <p>Typical onboarding — from first call to your first imported ledger, guided by a real specialist.</p>
+      </div>
+
+      <div class="bento-cell b-md">
+        <span class="bento-icon" style="background:#ecfdf5;color:#059669"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-clock"/></svg></span>
+        <span class="big"><span data-count="4" data-suffix=" hrs">0</span></span>
+        <p>Support SLA for paid plans — first human reply on any ticket, every business day.</p>
+      </div>
+
+      <div class="bento-cell b-md">
+        <span class="bento-icon" style="background:#fff7ed;color:#d97706"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg></span>
+        <span class="big"><span data-count="99" data-suffix="%">0</span></span>
+        <p>Platform uptime over the last 12 months, monitored 24/7 and posted on our status page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP & OFFICE ================= -->
+<section class="section" id="offices">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">Where we are</span>
+      <h2 class="section-title">Visit Stackly in Salem</h2>
+      <p class="section-sub">
+        Our registered office sits inside Tidel Park, Taramani — a few minutes from the Salem bus
+        stand. Walk in for a coffee, or book ahead and we'll set a room for your workshop.
+      </p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[1.35fr_.65fr] reveal" id="map">
+      <!-- map -->
+      <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card dark:border-white/10 dark:bg-white/5">
+        <iframe
+          title="Map showing Stackly Technologies Pvt Ltd, Tidel Park, Taramani, Salem, Tamil Nadu 636016, India"
+          src="https://maps.google.com/maps?q=4th%20Floor%2C%20Tidel%20Park%2C%20Old%20No.%2045%2C%205th%20Main%20Road%2C%20Taramani%2C%20Salem%2C%20Tamil%20Nadu%20636016%2C%20India&z=15&output=embed"
+          width="100%" height="480" style="border:0;display:block"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 px-5 py-4 dark:border-white/10">
+          <p class="text-sm font-semibold text-ink-900 dark:text-white">Stackly Technologies Pvt Ltd · Salem, Tamil Nadu</p>
+          <a class="btn-outline" href="https://maps.google.com/?q=Tidel%20Park%2C%20Taramani%2C%20Salem%2C%20Tamil%20Nadu%20636016%2C%20India" target="_blank" rel="noopener">
+            Get directions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- contact details -->
+      <div style="display:grid;gap:1rem;align-content:start">
+        <div class="contact-info-card">
+          <span class="ic" style="background:#fff7ed;color:#d97706"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pin"/></svg></span>
+          <div>
+            <h4>Registered address</h4>
+            <p>Stackly Technologies Pvt Ltd · 4th Floor, Tidel Park, Old No. 45, 5th Main Road, Taramani, Salem, Tamil Nadu 636016, India</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <span class="ic" style="background:#ecfdf5;color:#059669"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg></span>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+914224550142">+91 422 455 0142</a><br>Sales &amp; support · Mon–Fri, 9:30am–6:30pm IST</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <span class="ic"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-mail"/></svg></span>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:hello@stackly.com">hello@stackly.com</a><br>Replies within one business day · 24/7 emergency line for paid plans.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <span class="ic" style="background:#eef2ff;color:#4f46e5"><svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-clock"/></svg></span>
+          <div>
+            <h4>Office hours</h4>
+            <p>Monday – Friday, 9:30am – 6:30pm IST<br>Closed on Indian public holidays.</p>
+          </div>
+        </div>
+
+        <div class="bento-cell dark">
+          <h3>Company details</h3>
+          <p style="font-size:.88rem">
+            CIN: U63030TN2019PTC128456 · GSTIN: 33AAECS4821F1ZP<br>
+            Registered in the State of Tamil Nadu, India.
+          </p>
+          <a class="btn-glass" style="margin-top:1.15rem" href="#contact">Talk to a specialist
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section section-tint" id="faq">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">Before you write</span>
+      <h2 class="section-title">Questions we hear every day</h2>
+      <p class="section-sub">If your answer isn't here, send the form above — a specialist replies within one business day.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-card">
+        <summary>How fast will you reply to my request?<span class="plus"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-right"/></svg></span></summary>
+        <div class="answer">Every demo request gets a reply from a finance specialist within one business day. Existing customers reach a human on support in under four hours during business hours, and our emergency line is staffed 24/7 for anything that blocks your close.</div>
+      </details>
+
+      <details class="faq-card">
+        <summary>Can you help us migrate from QuickBooks, Xero or spreadsheets?<span class="plus"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-right"/></svg></span></summary>
+        <div class="answer">Yes — every plan includes a guided migration call. We map your chart of accounts, import historical transactions and reconcile the first period together, so your opening balances in Stackly tie back to the system you're leaving. Most teams are fully moved in a single day.</div>
+      </details>
+
+      <details class="faq-card">
+        <summary>Do you complete security questionnaires and vendor reviews?<span class="plus"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-right"/></svg></span></summary>
+        <div class="answer">We do. Send your questionnaire to hello@stackly.com and we'll return it with our SOC 2 Type II report, penetration test summary and DPA within two business days. Stackly is GDPR ready, PCI DSS compliant and ISO 27001 certified, with SSO/SCIM and granular role permissions available on every plan.</div>
+      </details>
+
+      <details class="faq-card">
+        <summary>I'm already a customer — where do I get support?<span class="plus"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-right"/></svg></span></summary>
+        <div class="answer">Open the in-app help centre to reach your support queue directly, or call +91 422 455 0142 during business hours (Mon–Fri, 9:30am–6:30pm IST). Your account also includes a named onboarding contact for the first 90 days, so you always know exactly who to ask.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section-sm" id="demo">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="cta-band reveal" style="--hero:url('../assets/photo-1611974789855-9c2a0a7236a3-1800x0.webp')">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div>
+        <span class="eyebrow" style="color:#a5b4fc">Get started</span>
+        <h2 style="margin-top:1rem">Bring us your messiest month.</h2>
+        <p>Open the live demo in seconds, or talk to a specialist who will walk your numbers with you — either way, you'll see your close get shorter.</p>
+        <div class="cta-actions">
+          <a class="btn-hero" href="dashboard.html">Open live demo
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+          </a>
+          <a class="btn-glass" href="pricing.html">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <p class="footer-blurb">The premium finance &amp; accounting workspace for teams who'd rather build than reconcile.</p>
+        <p class="footer-addr">Stackly Technologies Pvt Ltd · 4th Floor, Tidel Park, Old No. 45, 5th Main Road, Taramani, Salem, Tamil Nadu 636016, India</p>
+
+        <form id="newsletterForm" class="newsletter-dark mt-6 flex max-w-sm gap-2">
+          <input id="nlEmail" type="email" placeholder="you@company.com" aria-label="Email address">
+          <button class="btn-primary !px-4 !py-3 shrink-0" type="submit">Subscribe</button>
+        </form>
+        <p id="nlStatus" class="mt-2 hidden text-sm font-medium text-mint-400"></p>
+
+        <div class="footer-social">
+          <a href="https://x.com/i/flow/login" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-xlogo"/></svg></a>
+          <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-facebook"/></svg></a>
+          <a href="https://accounts.google.com/ServiceLogin" target="_blank" rel="noopener noreferrer" aria-label="Google"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-google"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="features.html#invoicing">Invoicing</a></li>
+          <li><a href="features.html#expenses">Expenses &amp; cards</a></li>
+          <li><a href="features.html#reporting">Reporting</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="dashboard.html">Live demo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html#team">Leadership</a></li>
+          <li><a href="about.html#careers">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#offices">Offices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="features.html#faq">Help centre</a></li>
+          <li><a href="features.html#faq">Security</a></li>
+          <li><a href="pricing.html#faq">Billing FAQ</a></li>
+          <li><a href="contact.html">Book a demo</a></li>
+          <li><a href="features.html">Changelog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Stackly Technologies Pvt Ltd. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <a href="features.html#faq">Privacy</a>
+        <a href="features.html#faq">Terms</a>
+        <a href="features.html#faq">Cookies</a>
+        <a href="dashboard.html">Status</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

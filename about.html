@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Stackly — the team rebuilding the finance stack</title>
+<meta name="description" content="Meet the team behind Stackly: our story since 2019, the numbers behind the platform, the values we work by, the milestones we've hit and the people we're hiring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+tailwind.config = {
+  darkMode:'class',
+  theme:{ extend:{
+    colors:{
+      brand:{50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'},
+      mint:{400:'#34d399',500:'#10b981',600:'#059669'},
+      ink:{900:'#070b1a',800:'#0b1120',700:'#111a33'}
+    },
+    fontFamily:{ display:['"Plus Jakarta Sans"','sans-serif'], sans:['Inter','sans-serif'] },
+    boxShadow:{ glow:'0 18px 60px -20px rgba(99,102,241,.55)', card:'0 1px 2px rgba(16,24,40,.04), 0 12px 32px -16px rgba(16,24,40,.18)' }
+  }}
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= ICON SPRITE ================= -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true"><defs>
+<symbol id="i-layers" viewBox="398 82 212 290"><path fill="#fcd34d" stroke="none" d=" M419.713867,256.179962   C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504   C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480   C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606   C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682   C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807   C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670   C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406   C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245   C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262   C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688   C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221   C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979   C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546   C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866   C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402   C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962  z"/><path fill="#fcd34d" stroke="none" d=" M536.351807,311.352905   C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535   C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633   C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189   C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251   C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334   C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803   C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284   C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502   C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700   C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190   C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408   C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948   C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802   C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372   C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905  z"/></symbol>
+<g id="i-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></g>
+<g id="i-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></g>
+<g id="i-check"><polyline points="20 6 9 17 4 12"/></g>
+<g id="i-up-right"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></g>
+<g id="i-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></g>
+<g id="i-calendar"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></g>
+<g id="i-wallet"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></g>
+<g id="i-file"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></g>
+<g id="i-bars"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></g>
+<g id="i-pie"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></g>
+<g id="i-refresh"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></g>
+<g id="i-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g>
+<g id="i-lock"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+<g id="i-globe"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></g>
+<g id="i-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
+<g id="i-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></g>
+<g id="i-card"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></g>
+<g id="i-trend"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></g>
+<g id="i-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></g>
+<g id="i-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g>
+<g id="i-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g>
+<g id="i-clock"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></g>
+<g id="i-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></g>
+<g id="i-briefcase"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g>
+<g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></g>
+<g id="i-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g>
+<g id="i-pen"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></g>
+<g id="i-coin"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a3 3 0 0 0-5 1v3a3 3 0 0 0 5 1"/><line x1="12" y1="7" x2="12" y2="9.5"/><line x1="12" y1="15" x2="12" y2="17"/></g>
+<g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+<g id="i-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></g>
+<g id="i-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></g>
+<g id="i-xlogo"><path fill="currentColor" stroke="none" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></g>
+<g id="i-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></g>
+<g id="i-google"><path fill="currentColor" stroke="none" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></g>
+</defs></svg>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav class="nav-shell">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+        <span class="brand-name">Stackly</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="features.html">Features</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-ghost" href="login.html">Log in</a>
+        <a class="btn-primary !px-4 !py-2.5 text-sm" href="signup.html">Start free
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="features.html">Features <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="pricing.html">Pricing <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="about.html">About <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <a href="contact.html">Contact <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-right"/></svg></a>
+      <div class="divider"></div>
+      <a href="login.html">Log in</a>
+      <a href="signup.html">Start free</a>
+      <a href="dashboard.html">Open live dashboard</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero hero-compact hero-noise" style="--hero:url('../assets/photo-1521737604893-d14cc237f11d-2000x0.webp')">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div style="max-width:44rem">
+      <span class="hero-eyebrow reveal">
+        <span class="tag">About</span>
+        Built by finance people, for finance teams
+      </span>
+
+      <h1 class="hero-title reveal">
+        We're rebuilding the finance stack <span class="grad">from the ledger up.</span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        Stackly started in 2019 with one stubborn belief: the numbers a business runs on should never be
+        a week out of date. Today a small, obsessive team in Salem and 42 countries builds the
+        workspace where more than 12,000 finance teams close, forecast and decide.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn-hero" href="#team">Meet the team
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-users"/></svg>
+        </a>
+        <a class="btn-glass" href="#careers">Careers
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-briefcase"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-meta reveal">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg> Founded 2019 · Salem, TN</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg> 12,400+ finance teams</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg> SOC 2 Type II certified</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="section" id="story">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="media-row">
+      <div class="media-frame reveal">
+        <img data-fallback src="assets/photo-1497366754035-f200968a6e72-1400x0.webp" alt="Modern glass office corridor at the Stackly headquarters" loading="lazy">
+        <div class="media-badge">
+          <span class="ic"><svg style="height:1rem;width:1rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pin"/></svg></span>
+          <span><b>Founded 2019 · Salem, TN</b><small>Registered office in Tamil Nadu, teammates in 42 countries</small></span>
+        </div>
+      </div>
+
+      <div class="media-body reveal">
+        <span class="eyebrow">Our story</span>
+        <h3 style="margin-top:1rem">It began with a close that took nine days</h3>
+        <p>
+          Our two founders were a controller and a platform engineer who kept meeting at the same place:
+          a spreadsheet that was always one import behind reality. Reconciling three bank accounts took a
+          week, the forecast was guesswork by Thursday, and nobody trusted the number the board saw.
+        </p>
+        <p>
+          So they built the tool they wanted — a ledger that ingests transactions as they land, matches
+          them automatically and reports in real time. Stackly has grown into a team of finance operators,
+          accountants and engineers who ship one product obsessively, with every feature traced back to a
+          real close, a real report and a real decision.
+        </p>
+        <ul class="check-list">
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Founded by a controller and an engineer who closed the books themselves</li>
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Profitable-minded: every roadmap item must earn its place in the ledger</li>
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Remote-first with our head office in Salem and hubs in London and Singapore</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUMBERS ================= -->
+<section class="section" id="numbers">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">By the numbers</span>
+      <h2 class="section-title">Proof, not promises</h2>
+      <p class="section-sub">The same live figures our own finance team reports on — updated as the platform grows.</p>
+    </div>
+
+    <div class="bento">
+      <div class="bento-cell b-xs reveal">
+        <span class="big" style="display:block"><span data-count="12400">0</span>+</span>
+        <p style="margin-top:.75rem">Finance teams run their close on Stackly</p>
+      </div>
+      <div class="bento-cell b-xs reveal">
+        <span class="big" style="display:block"><span data-count="4.8" data-decimals="1" data-prefix="$">0</span>B</span>
+        <p style="margin-top:.75rem">Processed through the platform every year</p>
+      </div>
+      <div class="bento-cell b-xs reveal">
+        <span class="big" style="display:block"><span data-count="99.99" data-decimals="2">0</span>%</span>
+        <p style="margin-top:.75rem">Platform uptime over the last 12 months</p>
+      </div>
+      <div class="bento-cell b-xs reveal">
+        <span class="big" style="display:block"><span data-count="42">0</span></span>
+        <p style="margin-top:.75rem">Countries with customers and teammates</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="section" id="values">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we believe</span>
+      <h2 class="section-title">Four values that show up in the product</h2>
+      <p class="section-sub">They shape how we write code, how we run the books and how we answer a support ticket at 5pm on close day.</p>
+    </div>
+
+    <div class="bento">
+      <div class="bento-cell b-xs reveal">
+        <span class="bento-icon" style="background:#eef2ff;color:#4f46e5">
+          <svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pie"/></svg>
+        </span>
+        <h3>Radical clarity</h3>
+        <p>Every number traces back to a source. No hidden fees, no black-box scores, no report you need a translator to read.</p>
+      </div>
+
+      <div class="bento-cell b-xs reveal">
+        <span class="bento-icon" style="background:#ecfdf5;color:#059669">
+          <svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-bars"/></svg>
+        </span>
+        <h3>Own the number</h3>
+        <p>We don't hand work downstream and hope. Whoever ships a metric stays with it until it reconciles.</p>
+      </div>
+
+      <div class="bento-cell b-xs reveal">
+        <span class="bento-icon" style="background:#fff7ed;color:#d97706">
+          <svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-zap"/></svg>
+        </span>
+        <h3>Automation over admin</h3>
+        <p>If a human is doing it twice, we build the machine. Matching, reminders and controls should run themselves.</p>
+      </div>
+
+      <div class="bento-cell b-xs reveal">
+        <span class="bento-icon" style="background:#e0e7ff;color:#4338ca">
+          <svg style="height:1.25rem;width:1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg>
+        </span>
+        <h3>Earn trust daily</h3>
+        <p>Backups, audits, permissions and uptime are renewed every day — trust is a practice, not a certification.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= JOURNEY ================= -->
+<section class="section section-tint" id="journey">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">The journey</span>
+      <h2 class="section-title">From one spreadsheet to 12,400 teams</h2>
+      <p class="section-sub">Seven years of shipping the boring, important things — one milestone at a time.</p>
+    </div>
+
+    <div class="timeline reveal" style="max-width:46rem;margin:0 auto">
+      <div class="tl-item">
+        <span class="tl-year">2019</span>
+        <h4>Stackly is founded in Salem, Tamil Nadu</h4>
+        <p>A controller and a platform engineer start building a ledger that reconciles itself. The first version runs the close for three friendly companies.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2021</span>
+        <h4>Our first 1,000 teams</h4>
+        <p>Automatic bank feeds, OCR receipt capture and one-click statements go live. Stackly closes its first full year of revenue and opens a London hub.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2023</span>
+        <h4>Real-time reporting &amp; multi-entity</h4>
+        <p>P&amp;L, cash flow and runway dashboards refresh as transactions land, and consolidation across regions arrives for groups with more than one entity.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2025</span>
+        <h4>$4.8B processed a year</h4>
+        <p>Cash-flow forecasting ships with an AI copilot, we pass our SOC 2 Type II audit and cross 12,000 teams on the platform.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2026</span>
+        <h4>Rebuilding the stack, ledger first</h4>
+        <p>Today we're re-architecting the core ledger for sub-second closes, with new hiring across finance operations, design and customer success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="section" id="team">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-head reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2 class="section-title">The people behind the ledger</h2>
+      <p class="section-sub">Operators, accountants and engineers who have closed the books — and know exactly what Stackly has to fix.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="photo">
+          <img data-fallback src="assets/photo-1494790108377-be9c29b29330-600x600-faces.webp" alt="Portrait of Amara Osei, co-founder and CEO of Stackly" loading="lazy">
+        </div>
+        <h4>Amara Osei</h4>
+        <span>Co-founder &amp; CEO</span>
+        <div class="socials">
+          <a href="#" aria-label="Amara Osei on LinkedIn"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Amara Osei on Twitter"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-twitter"/></svg></a>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="photo">
+          <img data-fallback src="assets/photo-1507003211169-0a1dd7228f2d-600x600-faces.webp" alt="Portrait of Daniel Whitfield, co-founder and CTO of Stackly" loading="lazy">
+        </div>
+        <h4>Daniel Whitfield</h4>
+        <span>Co-founder &amp; CTO</span>
+        <div class="socials">
+          <a href="#" aria-label="Daniel Whitfield on LinkedIn"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Daniel Whitfield on Twitter"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-twitter"/></svg></a>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="photo">
+          <img data-fallback src="assets/photo-1573497019940-1c28c88b4f3e-600x600-faces.webp" alt="Portrait of Priya Anand, chief financial officer of Stackly" loading="lazy">
+        </div>
+        <h4>Priya Anand</h4>
+        <span>Chief Financial Officer</span>
+        <div class="socials">
+          <a href="#" aria-label="Priya Anand on LinkedIn"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Priya Anand on Twitter"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-twitter"/></svg></a>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="photo">
+          <img data-fallback src="assets/photo-1560250097-0b93528c311a-600x600-faces.webp" alt="Portrait of Marcus Reed, VP engineering at Stackly" loading="lazy">
+        </div>
+        <h4>Marcus Reed</h4>
+        <span>VP Engineering</span>
+        <div class="socials">
+          <a href="#" aria-label="Marcus Reed on LinkedIn"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Marcus Reed on Twitter"><svg style="height:.95rem;width:.95rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-twitter"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIFE AT STACKLY (dark) ================= -->
+<section class="section section-dark" id="life">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="media-row" style="align-items:center">
+      <div class="media-body reveal">
+        <span class="eyebrow">Life at Stackly</span>
+        <h3 style="margin-top:1rem">Small team, high craft, zero finance theatre</h3>
+        <p>
+          We're a team of about 90 people who like hard problems and honest dashboards. Engineers sit with
+          controllers, designers shadow month-end closes, and every all-hands starts with the same slide:
+          how long did our customers take to close this month?
+        </p>
+        <ul class="check-list">
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Everyone ships — founders review pull requests and support tickets too</li>
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>One all-company close day each quarter so we feel our own product</li>
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Write it down: decisions live in RFCs, not in someone's memory</li>
+          <li><span class="tick-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span>Protect the deep-work hours — meetings are the exception, not the default</li>
+        </ul>
+        <div class="tag-row" style="margin-top:1.75rem">
+          <span class="soft-tag" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#cbd5e1">Remote-friendly</span>
+          <span class="soft-tag" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#cbd5e1">Quarterly offsites</span>
+          <span class="soft-tag" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#cbd5e1">Learning budget</span>
+          <span class="soft-tag" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#cbd5e1">Equity for everyone</span>
+        </div>
+      </div>
+
+      <div class="media-frame reveal">
+        <img data-fallback src="assets/photo-1517048676732-d65bc937f952-1400x0.webp" alt="Teammates writing notes together at a sunlit table" loading="lazy">
+        <div class="media-badge">
+          <span class="ic" style="background:rgba(16,185,129,.9)"><svg style="height:1rem;width:1rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-users"/></svg></span>
+          <span><b>~90 teammates</b><small>across Salem, London &amp; Singapore</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAREERS CTA ================= -->
+<section class="section-sm" id="careers">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="cta-band reveal" style="--hero:url('../assets/photo-1552664730-d307ca884978-1600x0.webp')">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div style="display:grid;gap:2.5rem;align-items:center" class="lg:grid-cols-2">
+        <div>
+          <span class="eyebrow" style="color:#a5b4fc">We're hiring</span>
+          <h2 style="margin-top:1rem">Come rebuild the finance stack with us.</h2>
+          <p>We hire slowly and deliberately: people who have felt the pain of a broken close, and want to erase it for everyone else. Remote-friendly, transparent pay bands, real ownership.</p>
+          <div class="cta-actions">
+            <a class="btn-hero" href="contact.html">See open roles
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-up-right"/></svg>
+            </a>
+            <a class="btn-glass" href="#team">Meet the team</a>
+          </div>
+        </div>
+
+        <div class="glass-card" style="background:rgba(255,255,255,.07)">
+          <div class="glass-bar">
+            <span class="dots"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#34d399"></i></span>
+            <span class="glass-title">open roles</span>
+            <span></span>
+          </div>
+          <div style="padding:1.5rem">
+            <p style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700">Hiring now</p>
+            <div class="tag-row" style="margin-top:.85rem">
+              <span class="soft-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#e2e8f0">Finance Operations Lead · Salem</span>
+              <span class="soft-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#e2e8f0">Senior Product Designer · Remote</span>
+              <span class="soft-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#e2e8f0">Customer Success Manager · London</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers"/></svg></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <p class="footer-blurb">The premium finance &amp; accounting workspace for teams who'd rather build than reconcile.</p>
+        <p class="footer-addr">Stackly Technologies Pvt Ltd · 4th Floor, Tidel Park, Old No. 45, 5th Main Road, Taramani, Salem, Tamil Nadu 636016, India</p>
+
+        <form id="newsletterForm" class="newsletter-dark mt-6 flex max-w-sm gap-2">
+          <input id="nlEmail" type="email" placeholder="you@company.com" aria-label="Email address">
+          <button class="btn-primary !px-4 !py-3 shrink-0" type="submit">Subscribe</button>
+        </form>
+        <p id="nlStatus" class="mt-2 hidden text-sm font-medium text-mint-400"></p>
+
+        <div class="footer-social">
+          <a href="https://x.com/i/flow/login" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-xlogo"/></svg></a>
+          <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-linkedin"/></svg></a>
+          <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-facebook"/></svg></a>
+          <a href="https://accounts.google.com/ServiceLogin" target="_blank" rel="noopener noreferrer" aria-label="Google"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-google"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="features.html#invoicing">Invoicing</a></li>
+          <li><a href="features.html#expenses">Expenses &amp; cards</a></li>
+          <li><a href="features.html#reporting">Reporting</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="dashboard.html">Live demo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html#team">Leadership</a></li>
+          <li><a href="about.html#careers">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#offices">Offices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="features.html#faq">Help centre</a></li>
+          <li><a href="features.html#faq">Security</a></li>
+          <li><a href="pricing.html#faq">Billing FAQ</a></li>
+          <li><a href="contact.html">Book a demo</a></li>
+          <li><a href="features.html">Changelog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Stackly Technologies Pvt Ltd. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <a href="features.html#faq">Privacy</a>
+        <a href="features.html#faq">Terms</a>
+        <a href="features.html#faq">Cookies</a>
+        <a href="dashboard.html">Status</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
